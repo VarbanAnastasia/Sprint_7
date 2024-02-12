@@ -46,7 +46,6 @@ class Data:
         "firstName": fake.name()
     }
 
-
     data_200_login = {
             "login": "pumpum",
             "password": "1111"

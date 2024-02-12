@@ -5,14 +5,15 @@ import pytest
 from constants.urls import Urls
 from constants.user_data import Data
 
-url = Urls.CREATE_ORDER_URL
+url = Urls.ALL_ORDERS_URL
 headers = {"Content-Type": "application/json"}
 
 
+@allure.feature('Create order')
 class TestApiCreateOrder:
 
     @allure.feature('Create order')
-    @allure.story('POST запрос на создание заказа')
+    @allure.title('POST запрос на создание заказа')
     @pytest.mark.parametrize(("data", "status_code"), [
         (Data.data_for_order, 201),
         (Data.data_without_color, 201),
